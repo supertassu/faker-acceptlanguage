@@ -1,0 +1,30 @@
+{
+    "name": "taavi/faker-acceptlanguage",
+    "description": "a Faker provider for generating HTTP Accept-Language headers",
+    "type": "library",
+    "require": {
+        "php": "^7.3|^8.0",
+        "fakerphp/faker": "^1.12"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Taavi Vaananen",
+            "email": "mailbox@taavi.wtf"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Taavi\\FakerAcceptLanguage\\": "includes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Taavi\\FakerAcceptLanguage\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,20 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions:
+          - 7.3 # lowest supported
+          - 7.4
+          - 8.0
+    steps:
+      - uses: workflows/checkout@v2
+      - uses: php-workflows/composer@v4
+        with:
+          php_version: ${{ matrix.php-versions }}
+          composer_version: 2
+      - uses: php-workflows/phpunit@v1
+        with:
+          php_version: ${{ matrix.php-versions }}
