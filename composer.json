@@ -2,6 +2,7 @@
     "name": "taavi/faker-acceptlanguage",
     "description": "a Faker provider for generating HTTP Accept-Language headers",
     "type": "library",
+    "version": "1.0.0",
     "require": {
         "php": "^7.3|^8.0",
         "fakerphp/faker": "^1.12"
