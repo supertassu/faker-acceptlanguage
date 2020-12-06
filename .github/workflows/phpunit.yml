@@ -10,11 +10,11 @@ jobs:
           - 7.4
           - 8.0
     steps:
-      - uses: workflows/checkout@v2
-      - uses: php-workflows/composer@v4
+      - uses: actions/checkout@v2
+      - uses: php-actions/composer@v4
         with:
           php_version: ${{ matrix.php-versions }}
           composer_version: 2
-      - uses: php-workflows/phpunit@v1
+      - uses: php-actions/phpunit@v1
         with:
           php_version: ${{ matrix.php-versions }}
